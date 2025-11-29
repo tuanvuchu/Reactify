@@ -1,3 +1,5 @@
 node_modules
 dist
 public/64
+index.html
+.prettierignore

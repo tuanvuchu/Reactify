@@ -1,0 +1,44 @@
+{
+  "extDescription": {
+    "message": "Thêm nhiều lựa chọn cảm xúc hơn cho story Facebook."
+  },
+  "extName": {
+    "message": "Test"
+  },
+  "symbols": {
+    "message": "Symbols"
+  },
+  "flags": {
+    "message": "Flags"
+  },
+  "more": {
+    "message": "More"
+  },
+  "objects": {
+    "message": "Objects"
+  },
+  "travelPlaces": {
+    "message": "Travel & Places"
+  },
+  "activities": {
+    "message": "Activities"
+  },
+  "foodDrink": {
+    "message": "Food & Drink"
+  },
+  "animalsNature": {
+    "message": "Animals & Nature"
+  },
+  "peopleBody": {
+    "message": "People & Body"
+  },
+  "smileysEmotion": {
+    "message": "Smileys & Emotion"
+  },
+  "frequentlyUsed": {
+    "message": "Frequently Used"
+  },
+  "somethingWentWrong": {
+    "message": "Something went wrong!"
+  }
+}

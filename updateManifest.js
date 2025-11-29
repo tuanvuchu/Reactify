@@ -4,15 +4,9 @@ const distDir = "./dist/assets";
 const manifestPath = "./dist/manifest.json";
 const files = fs.readdirSync(distDir);
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-files.forEach((p) => {
-  if (p.startsWith("background-")) {
-    manifest.background.service_worker = `assets/${p}`;
-  }
-});
 
 if (Array.isArray(manifest.content_scripts)) {
   manifest.content_scripts.forEach((script) => {
-    // Cập nhật JS
     if (Array.isArray(script.js)) {
       script.js = script.js.map((jsFile) => {
         const baseName = jsFile.replace("assets/", "").replace(".js", "");
@@ -23,7 +17,6 @@ if (Array.isArray(manifest.content_scripts)) {
       });
     }
 
-    // Cập nhật CSS
     if (Array.isArray(script.css)) {
       script.css = script.css.map((cssFile) => {
         const baseName = cssFile.replace("assets/", "").replace(".css", "");

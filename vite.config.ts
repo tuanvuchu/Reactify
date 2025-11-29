@@ -7,7 +7,6 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        background: "src/background.js",
         content: "src/scripts/content.js",
         style: "src/styles/style.css",
       },
