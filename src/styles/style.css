@@ -91,7 +91,7 @@
   opacity: 1;
 }
 
-.emoji-button-tooltip {
+/* .emoji-button-tooltip {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
   color: #fff;
@@ -105,7 +105,7 @@
   -webkit-user-select: none;
   user-select: none;
   pointer-events: none;
-}
+} */
 
 .emoji-button-svg {
   border-radius: 50%;
