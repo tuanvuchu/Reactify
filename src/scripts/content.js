@@ -85,16 +85,7 @@ async function sendReply(userId, fbDtsg, storyId, reaction) {
       __ccg: "GOOD",
       __comet_req: 15,
       __crn: "comet.fbweb.CometStoriesSuspenseViewerRoute",
-      // __csr: "",
-      // __dyn: "",
-      // __hblp: "",
       __hs: "20392.HYP:comet_pkg.2.1...0",
-      // __hsdp: "",
-      // __hsi: "",
-      // __req: "",
-      // __rev: "",
-      // __s: "",
-      // __sjsp: "",
       __spin_b: "trunk",
       __spin_r: randomNumber(10),
       __spin_t: randomNumber(10),
@@ -105,8 +96,6 @@ async function sendReply(userId, fbDtsg, storyId, reaction) {
       fb_api_caller_class: "RelayModern",
       fb_api_req_friendly_name: "useStoriesSendReplyMutation",
       fb_dtsg: fbDtsg,
-      // jazoest: "",
-      // lsd: "",
       server_timestamps: true,
       variables: JSON.stringify(variables),
     });
@@ -144,8 +133,8 @@ async function handleReaction(emoji) {
   }
 }
 
-function injectHTML(target) {
-  const html = `<div class="emoji-wrapper x9f619 x1n2onr6 x1ja2u2z x78zum5 xdt5ytf x193iq5w xeuugli x1r8uery x1iyjqo2 xs83m0k">
+function injectHTML() {
+  const html = `<div class="emoji-wrapper x9f619 x1ja2u2z x78zum5 xdt5ytf x193iq5w xeuugli x1r8uery x1iyjqo2 xs83m0k">
       <div class="emoji-container">
         <div class="emoji-picker">
           <div class="emoji-list-container">
@@ -162,7 +151,7 @@ function injectHTML(target) {
           </div>
           <ul class="tabs-list-trigger">
             <li class="tabs-trigger" title="${t(
-              "frequentlyUsed"
+              "frequentlyUsed",
             )}" value="frequently_used">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none"
                 stroke="#9096a3">
@@ -171,7 +160,7 @@ function injectHTML(target) {
               </svg>
             </li>
             <li class="tabs-trigger" title="${t(
-              "smileysEmotion"
+              "smileysEmotion",
             )}" value="smileys_emotion" data-state="active">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="#9096a3">
                 <circle cx="12" cy="12" r="10" />
@@ -181,7 +170,7 @@ function injectHTML(target) {
               </svg>
             </li>
             <li class="tabs-trigger" title="${t(
-              "peopleBody"
+              "peopleBody",
             )}" value="people_body">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="#9096a3"
                 stroke="#9096a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -192,7 +181,7 @@ function injectHTML(target) {
             </li>
 
             <li class="tabs-trigger" title="${t(
-              "animalsNature"
+              "animalsNature",
             )}" value="animals_nature">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="#9096a3">
                 <path
@@ -203,7 +192,7 @@ function injectHTML(target) {
               </svg>
             </li>
             <li class="tabs-trigger" title="${t(
-              "foodDrink"
+              "foodDrink",
             )}" value="food_drink">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="#9096a3">
                 <path d="M5 16a2 2 0 0 0-2 2 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 2 2 0 0 0-2-2q0 0 0 0" stroke="#474646" />
@@ -213,7 +202,7 @@ function injectHTML(target) {
               </svg>
             </li>
             <li class="tabs-trigger" title="${t(
-              "activities"
+              "activities",
             )}" value="activities">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none">
                 <circle cx="12" cy="12" r="10" fill="#9096a3" stroke="#474646" />
@@ -225,7 +214,7 @@ function injectHTML(target) {
               </svg>
             </li>
             <li class="tabs-trigger" title="${t(
-              "travelPlaces"
+              "travelPlaces",
             )}" value="travel_places">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="#9096a3">
                 <path stroke="#9096a3" d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8Z" />
@@ -271,7 +260,7 @@ function injectHTML(target) {
       </div>
       <div class="emoji-button" role="button" aria-label="${t("more")}">
         <div class="emoji-button-tooltip x5hsz1j x10e4vud x1v7wizp x127lhb5 xjb1437 x1rgw4pv x1vjm0to xnqoqkk x16lu3ki xmqbgn8 x126bsmu x1pg5gke x117nqv4 x1nrll8i xyqdw3p x1gabggj xg8j3zb xaso8d8 x10l6tqk xuuh30 x1s85apg">${t(
-          "more"
+          "more",
         )}</div>
         <svg class="emoji-button-svg" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 24 24"
           stroke="pink" stroke-width="2">
@@ -283,20 +272,13 @@ function injectHTML(target) {
     </div>`;
 
   const observer = new MutationObserver(() => {
-    const toolbar = document.querySelector('div.x78zum5[role="toolbar"]');
-    if (!toolbar) return;
-    const target = toolbar.querySelector(
-      "div.x9f619.x1ja2u2z.x78zum5.x2lah0s.x1n2onr6.x1qughib.x1qjc9v5.xozqiw3.x1q0g3np.xyri2b.x1c1uobl.x18d9i69.xexx8yu",
+    const target = document.querySelector(
+      ".x1l13bqq.x78zum5.x5yr21d.xh8yej3.x1ui1jxi.x1d8287x.x11xpdln.x9lcvmn.x1so62im",
     );
-
     if (!target) return;
-    const target1 = target.querySelector(
-      "div.x9f619.x1ja2u2z.x78zum5.x2lah0s.x1n2onr6.x1qughib.x1qjc9v5.xozqiw3.x1q0g3np.xyri2b.x1c1uobl.x18d9i69.xexx8yu",
-    );
-    if (!target1) return;
 
-    if (target1.querySelector(".emoji-wrapper")) return;
-    target1.insertAdjacentHTML("beforeend", html);
+    if (target.querySelector(".emoji-wrapper")) return;
+    target.insertAdjacentHTML("beforeend", html);
   });
   observer.observe(document.body, { childList: true, subtree: true });
 }

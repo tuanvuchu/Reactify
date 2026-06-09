@@ -1,6 +1,10 @@
-/* .emoji-wrapper {
-  position: relative;
-} */
+.emoji-wrapper {
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  bottom: 14px;
+  right: 50px;
+}
 
 .emoji-picker {
   background: #fff;
@@ -13,7 +17,7 @@
   width: 290px;
   position: absolute;
   bottom: calc(123% + 5px);
-  transform: translateX(-40%);
+  transform: translateX(-80%);
 }
 
 .tabs-content {
